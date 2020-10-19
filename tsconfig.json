@@ -1,0 +1,24 @@
+{
+
+  "compilerOptions": {
+    "strict": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "types": [
+      "cypress"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "target": "es5",
+    "include": [
+      "node_modules/cypress",
+      "cypress/*/*.ts"
+    ],
+    "compileOnSave": false
+  }
+}

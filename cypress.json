@@ -1,0 +1,9 @@
+{
+  "testFiles": "**/*.feature",
+  "include": [
+    "integration/*.ts",
+    "support/*.ts",
+    "../node_modules/cypress"
+  ],
+  "projectId": "trivsv"
+}
