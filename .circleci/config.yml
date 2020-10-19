@@ -1,8 +1,7 @@
-# See https://github.com/cypress-io/circleci-orb
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@1
+  node: circleci/node@3.0.0
 workflows:
-  build:
+  node-tests:
     jobs:
-      - cypress/run
+      - node/test
