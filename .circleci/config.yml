@@ -5,5 +5,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          command: npx cypress run --record 4d9179d2-75b0-4a1c-adc9-06ae930b13c9
           store_artifacts: true
