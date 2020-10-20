@@ -1,8 +1,6 @@
-class Basepage{
-
-   static pause(milliseconds: number){
-       cy.wait(milliseconds)
-   }
-
+class Basepage {
+  static pause(milliseconds: number) {
+    cy.wait(milliseconds);
+  }
 }
-export default Basepage
+export default Basepage;

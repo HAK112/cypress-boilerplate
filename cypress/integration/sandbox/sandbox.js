@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var steps_1 = require("cypress-cucumber-preprocessor/steps");
 var amazonsearchpage_1 = require("../../pageobjects/amazonsearchpage");
 var amazonsearchpage = new amazonsearchpage_1.default();
-//cy.fixture('data').as("record")
+// cy.fixture('data').as("record")
 //
 // Before(() => {
 //   //cy.visit("https://e2e-boilerplate.github.io/sandbox/");
@@ -24,7 +24,7 @@ var amazonsearchpage = new amazonsearchpage_1.default();
 // })
 beforeEach(function () {
     // alias the users fixtures
-    cy.fixture('data.json').as('users');
+    cy.fixture("data.json").as("users");
 });
 steps_1.Given("I am on Amazon website", function () {
     amazonsearchpage.visitamazonpage();

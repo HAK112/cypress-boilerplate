@@ -1,9 +1,9 @@
 // tslint:disable-next-line:no-submodule-imports
-import {Given, Before, Then, And} from "cypress-cucumber-preprocessor/steps";
+import { Given, Before, Then, And } from "cypress-cucumber-preprocessor/steps";
 import Amazonsearchpage from "../../pageobjects/amazonsearchpage";
 
- let amazonsearchpage = new Amazonsearchpage()
-//cy.fixture('data').as("record")
+const amazonsearchpage = new Amazonsearchpage();
+// cy.fixture('data').as("record")
 //
 // Before(() => {
 //   //cy.visit("https://e2e-boilerplate.github.io/sandbox/");
@@ -22,45 +22,40 @@ import Amazonsearchpage from "../../pageobjects/amazonsearchpage";
 //   })
 // })
 beforeEach(() => {
-    // alias the users fixtures
-    cy.fixture('data.json').as('users')
-})
+  // alias the users fixtures
+  cy.fixture("data.json").as("users");
+});
 
 Given("I am on Amazon website", () => {
-  amazonsearchpage.visitamazonpage()
+  amazonsearchpage.visitamazonpage();
 });
 
 Then("Search for {string}", (text) => {
-  amazonsearchpage.searchphone(text)
+  amazonsearchpage.searchphone(text);
 });
 
 Then("Open phone {string}", (text) => {
-  amazonsearchpage.clickonphonedetails(text)
+  amazonsearchpage.clickonphonedetails(text);
 });
 
 And("Navigate to Phone and add to cart button is displayed", () => {
-    amazonsearchpage.navigatetoonephone();
-})
+  amazonsearchpage.navigatetoonephone();
+});
 
 And("Verify {string} is displayed on detail page", (price) => {
-    amazonsearchpage.verifypriceonbothpages(price);
+  amazonsearchpage.verifypriceonbothpages(price);
 });
 
 And("Verify Cart is Empty", () => {
-    amazonsearchpage.emptycart();
+  amazonsearchpage.emptycart();
 });
 And("Click on Add to Cart", () => {
-    amazonsearchpage.addtocart();
+  amazonsearchpage.addtocart();
 });
 
 And("Verify Items added to Cart", () => {
-    amazonsearchpage.verifyitemsaddedtocart();
+  amazonsearchpage.verifyitemsaddedtocart();
 });
 And("Select filters {string} from left panel and get results", (text) => {
-    amazonsearchpage.Selectbrandfilter(text);
+  amazonsearchpage.Selectbrandfilter(text);
 });
-
-
-
-
-

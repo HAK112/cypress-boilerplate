@@ -37,4 +37,4 @@ Feature: Sandbox
 
     Examples:
       |Brand                 |
-      |Samsung;Android;8 GB  |
+      |SAMSUNG;Android;8 GB  |
