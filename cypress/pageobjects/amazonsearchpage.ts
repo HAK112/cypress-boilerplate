@@ -28,7 +28,7 @@ class Amazonsearchpage {
   // Navigate to Phone from search results
   clickonphonedetails(text: string) {
     // cy.get('.a-offscreen').contains('598').should('be.visible')
-    cy.get('h2').children().children().contains(text).click({force:true});
+    cy.get("h2").children().children().contains(text).click({ force: true });
     cy.wait(5000);
     cy.get(addtocarticon).should("be.visible");
   }
@@ -66,11 +66,16 @@ class Amazonsearchpage {
   // Select Branded phones and filter options from left panel
   Selectbrandfilter(text: string) {
     const filtervalue = text.split(";");
+    // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < filtervalue.length; i++) {
-      cy.get("li[aria-label='"+ filtervalue[i] +"']").children().children().children().children().children('input[type="checkbox"]').click({ force: true });
+      cy.get("li[aria-label='" + filtervalue[i] + "']")
+        .children()
+        .children()
+        .children()
+        .children()
+        .children('input[type="checkbox"]')
+        .click({ force: true });
     }
-
-
   }
 }
 export default Amazonsearchpage;

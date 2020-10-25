@@ -29,7 +29,7 @@ var Amazonsearchpage = /** @class */ (function () {
     // Navigate to Phone from search results
     Amazonsearchpage.prototype.clickonphonedetails = function (text) {
         // cy.get('.a-offscreen').contains('598').should('be.visible')
-        cy.get('h2').children().children().contains(text).click({ force: true });
+        cy.get("h2").children().children().contains(text).click({ force: true });
         cy.wait(5000);
         cy.get(addtocarticon).should("be.visible");
     };
@@ -64,8 +64,15 @@ var Amazonsearchpage = /** @class */ (function () {
     // Select Branded phones and filter options from left panel
     Amazonsearchpage.prototype.Selectbrandfilter = function (text) {
         var filtervalue = text.split(";");
+        // tslint:disable-next-line:prefer-for-of
         for (var i = 0; i < filtervalue.length; i++) {
-            cy.get("li[aria-label='" + filtervalue[i] + "']").children().children().children().children().children('input[type="checkbox"]').click({ force: true });
+            cy.get("li[aria-label='" + filtervalue[i] + "']")
+                .children()
+                .children()
+                .children()
+                .children()
+                .children('input[type="checkbox"]')
+                .click({ force: true });
         }
     };
     return Amazonsearchpage;
