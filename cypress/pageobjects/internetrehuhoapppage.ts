@@ -1,5 +1,10 @@
+
+// import {} from "../fixtures/users.json"
+// import {data} from "../fixtures/users.json"
+cy.fixture("users.json").as("users");
 // tslint:disable-next-line:class-name
 class internetrehuhoapppage {
+
 
    visitsite(){
        cy.visit("https://the-internet.herokuapp.com/");
@@ -24,6 +29,42 @@ class internetrehuhoapppage {
        cy.on('window:alert',(txt)=>{
            expect(txt).to.contains("You selected a context menu");
        })
+    }
+    enterusername(usersn:string){
+        cy.fixture("users").then(function (users) {
+            this.user = users;
+            // cy.visit(this.data.URL);
+            cy.get('input[name="username"]').type(this.user[usersn].username);
+        });
+
+         // cy.get('input[name="username"]').type(usersn);
+    }
+    enterpassword(usersn:string){
+        cy.fixture("users").then(function (users) {
+            this.user = users;
+            // cy.visit(this.data.URL);
+            cy.get('input[name="password"]').type(this.user[usersn].password);
+        });
+
+        // cy.get('input[name="password"]').type(nonadmin.password);
+
+
+    }
+    clicksubmit(){
+
+        cy.get('.radius').click();
+    }
+
+    openurlinnewtab(){
+        cy.get('a[href="/windows/new"]')
+            .invoke('removeAttr', 'target').click();
+
+        // cy.get('a[href="/windows/new"]').click();
+        // cy.get('a[href="/windows/new"]').should('have.attr', 'target', '_blank')
+        // cy.wait(1000);
+        cy.get("h3").contains("New Window").should("be.visible");
+        cy.go('back');
+
     }
 
 }

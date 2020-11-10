@@ -1,0 +1,10 @@
+{
+  "nonadmin": {
+    "username": "tomsmith",
+    "password": "pass12"
+        },
+  "admin": {
+    "username": "tomsmith",
+    "password": "SuperSecretPassword!"
+       }
+} 

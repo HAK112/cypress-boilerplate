@@ -1,3 +1,5 @@
 {
-  "URL": "https://www.amazon.com/"
+  "URL": "https://www.amazon.com/",
+  "username": "tomsmith",
+  "password": "pass12"
 }
