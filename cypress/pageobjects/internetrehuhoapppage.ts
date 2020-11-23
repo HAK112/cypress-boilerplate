@@ -1,7 +1,9 @@
+import Basepage from "./Basepage";
 
-// import {} from "../fixtures/users.json"
-// import {data} from "../fixtures/users.json"
-cy.fixture("users.json").as("users");
+
+const dragA = '#column-a';
+const dragB = '#column-b';
+
 // tslint:disable-next-line:class-name
 class internetrehuhoapppage {
 
@@ -65,6 +67,16 @@ class internetrehuhoapppage {
         cy.get("h3").contains("New Window").should("be.visible");
         cy.go('back');
 
+    }
+    dragdropfunction(){
+        const dataTransfer = new DataTransfer;
+
+        cy.get(dragA)
+            .trigger('dragstart', { dataTransfer });
+
+        cy.get(dragB)
+            .trigger('drop', { dataTransfer });
+        cy.get("div[id=\"column-a\"]").children().should('contain', 'B');
     }
 
 }

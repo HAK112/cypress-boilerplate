@@ -45,4 +45,7 @@ Then("Click on Submit button", () => {
 Then("Open in new tab", () => {
     internetpage.openurlinnewtab();
 });
+Then("Drag Ablock to Bblock", () => {
+    internetpage.dragdropfunction();
+});
 
