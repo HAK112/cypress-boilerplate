@@ -1,6 +1,7 @@
 {
   "author": "Test",
   "cypress-cucumber-preprocessor": {
+    "step_defintions": "cypress/integration",
     "nonGlobalStepDefinitions": true
   },
   "dependencies": {
