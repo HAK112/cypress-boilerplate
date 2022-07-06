@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "cypress-open": "npx cypress open",
-    "cypress-tags": "npx cypress-tags run -e TAGS=\"@visitFailed\" --headed --browser chrome",
-    "cypress-test": "cypress run --spec cypress\\e2e\\features\\*.feature --headless --browser chrome",
+    "cypress-tags": "npx cypress-tags run -e TAGS=\"@visit\" --headed --browser chrome",
+    "cypress-test": "cypress run --spec cypress\\e2e\\features\\*.feature --headed --browser chrome",
     "report-gen": "node cucumber-html-report.js",
     "test-tag-headless": "npm run cypress-test && node cucumber-html-report.js",
-    "test-tag": "npm run cypress-tags && node cucumber-html-report.js"
+    "test-tag": "npm run cypress-tags && node cucumber-html-report.js",
+    "cypress-run": "cypress run --record --key 11a47474-7be4-4fad-8f07-42ac39bbbd58 && report-gen"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,

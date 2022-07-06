@@ -18,5 +18,12 @@ Then('user clicks on copy json of {string}', {timeout: 60 * 1000}, function(data
 });
 
 Then('user lands on {string} page', {timeout: 60 * 1000}, function(data){
-    cy.get(dashboardPage.dashboard_title).should('have.text',data);
+   // cy.get(dashboardPage.dashboard_title).should('have.text',data);
+try {
+    cy.get(dashboardPage.dashboard_title).invoke('text').then((text) => {
+        expect(text.trim()).equal(data);
+    });
+}catch (e) {
+    cy.log(e.toString());
+}
 });
