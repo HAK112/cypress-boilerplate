@@ -1,0 +1,31 @@
+{
+  "name": "kualitee-cypress-boilerplate",
+  "version": "1.0.0",
+  "description": "kualitee cypress boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "cypress-open": "npx cypress open",
+    "cypress-tags": "npx cypress-tags run -e TAGS=\"@visitFailed\" --headed --browser chrome",
+    "cypress-test": "cypress run --spec cypress\\e2e\\features\\*.feature --headless --browser chrome",
+    "report-gen": "node cucumber-html-report.js",
+    "test-tag-headless": "npm run cypress-test && node cucumber-html-report.js",
+    "test-tag": "npm run cypress-tags && node cucumber-html-report.js"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/step_definitions",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.3.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.21.4"
+  }
+}

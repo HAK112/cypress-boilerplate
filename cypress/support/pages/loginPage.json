@@ -1,0 +1,5 @@
+{
+  "login_email": "#email_id",
+  "login_password": "#password",
+  "login_button": "input[class='submit-btn']"
+}

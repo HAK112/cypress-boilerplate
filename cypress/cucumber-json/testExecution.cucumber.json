@@ -1,0 +1,57 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "To Check and Verify the Test Execution Functionality",
+    "line": 1,
+    "id": "to-check-and-verify-the-test-execution-functionality",
+    "tags": [],
+    "uri": "testExecution.feature",
+    "elements": [
+      {
+        "id": "to-check-and-verify-the-test-execution-functionality;verify-dashboard",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Verify dashboard",
+        "tags": [
+          {
+            "name": "@visitFailed",
+            "line": 9
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "visit application and Login",
+            "result": {
+              "status": "passed",
+              "duration": 14104000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "user clicks on copy json of \"AUT_DASH_001\"",
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "user lands on \"Test Case Execution\" page",
+            "result": {
+              "status": "failed",
+              "error_message": "CypressError: Cypress detected that you returned a promise from a command while also invoking one or more cy commands in that promise.\n\nThe command that returned the promise was:\n\n  > `cy.get()`\n\nThe cy command you invoked inside the promise was:\n\n  > `cy.log()`\n\nBecause Cypress commands are already promise-like, you don't need to wrap them or return your own promise.\n\nCypress will resolve your command with whatever the final Cypress command yields.\n\nThe reason this is an error instead of a warning is because Cypress internally queues commands serially whereas Promises execute as soon as they are invoked. Attempting to reconcile this would prevent Cypress from ever resolving.\n    at cy.<computed> [as log] (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:171701:72)\n    at listener (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:175387:19)\n    at arrayMap (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:40807:23)\n    at map (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:49776:14)\n    at $Cypress.<anonymous> (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:175390:14)\n    at parent.<computed> [as emitMap] (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:175345:31)\n    at $Cypress.action (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:168058:21)\n    at $Cy.fail (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:171479:27)\n    at onError (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:170552:19)\n    at Context.eval (https://kualiteedemo.kualitee.com/__cypress/tests?p=cypress\\e2e\\features\\testExecution.feature:109:53)\n    at Context.resolveAndRunStepDefinition (https://kualiteedemo.kualitee.com/__cypress/tests?p=cypress\\e2e\\features\\testExecution.feature:10735:29)\n    at Context.eval (https://kualiteedemo.kualitee.com/__cypress/tests?p=cypress\\e2e\\features\\testExecution.feature:10056:35)\nFrom previous event:\n    at CommandQueue.run (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:185561:13)\n    at CommandQueue.run (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:170559:15)\n    at cy.<computed> [as then] (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:171717:18)\n    at __stackReplacementMarker (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:171137:13)\n    at runnable.fn (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:171945:19)\n    at callFn (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122317:21)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122304:7)\n    at https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:179091:30\nFrom previous event:\n    at Object.onRunnableRun (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:179076:19)\n    at $Cypress.action (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:168001:28)\n    at Runnable.run (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:176727:13)\n    at ../driver/node_modules/mocha/lib/runner.js.Runner.runTest (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122976:10)\n    at https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:123102:12\n    at next (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122885:14)\n    at https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122895:7\n    at next (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122797:14)\n    at Hook.<anonymous> (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122858:7)\n    at next (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:178986:24)\n    at https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:179015:13\nFrom previous event:\n    at onNext (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:179012:59)\n    at done (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122257:5)\n    at callFn (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122340:7)\n    at ../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122304:7)\n    at https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:179091:30\nFrom previous event:\n    at Object.onRunnableRun (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:179076:19)\n    at $Cypress.action (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:168001:28)\n    at Runnable.run (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:176727:13)\n    at next (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122819:10)\n    at https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:122863:5\n    at timeslice (https://kualiteedemo.kualitee.com/__cypress/runner/cypress_runner.js:116789:27)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

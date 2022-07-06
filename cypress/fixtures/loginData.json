@@ -1,0 +1,50 @@
+{
+  "credentials":{
+    "email":"khalid.wazir+10333@virtualforce.io",
+    "password":"12312312"
+  },
+  "automation1": {
+    "email":"automation.kualitee+1@gmail.com",
+    "password":"kualitatem"
+  },
+  "automation2": {
+    "email":"automation.kualitee+2@gmail.com",
+    "password":"kualitatem"
+  },
+  "automation3": {
+    "email":"automation.kualitee+3@gmail.com",
+    "password":"kualitatem"
+  },
+  "automation4": {
+    "email":"automation.kualitee+4@gmail.com",
+    "password":"kualitatem"
+  },
+  "automation5": {
+    "email":"automation.kualitee+5@gmail.com",
+    "password":"kualitatem"
+  },
+  "automation6": {
+    "email":"automation.kualitee+6@gmail.com",
+    "password":"kualitatem"
+  },
+  "automation7": {
+    "email":"automation.kualitee+7@gmail.com",
+    "password":"kualitatem"
+  },
+  "automation8": {
+    "email":"automation.kualitee+8@gmail.com",
+    "password":"kualitatem"
+  },
+  "automation9": {
+    "email":"haider.ali@kualitatem.com",
+    "password":"kualitatem"
+  },
+  "automation10": {
+    "email":"automation.kualitee+10@gmail.com",
+    "password":"kualitatem"
+  },
+  "automation11": {
+    "email":"automation.kualitee+11@gmail.com",
+    "password":"kualitatem"
+  }
+}
